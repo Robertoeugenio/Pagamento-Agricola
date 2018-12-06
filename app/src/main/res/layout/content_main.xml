@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/name"
             android:layout_toRightOf="@+id/img"
-            android:textColor="#f00"
+            android:textColor="#c43316"
             android:textSize="22sp" />
 
         <TextView
@@ -75,11 +75,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="#ff5100"
+            android:background="#1d861d"
             android:gravity="center"
             android:onClick="buy"
             android:padding="10dp"
-            android:text="@string/button_buy"
+            android:text="Efetuar o Pagamento"
             android:textColor="#fff" />
 
         <WebView

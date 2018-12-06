@@ -42,7 +42,7 @@ public class Product {
     }
     /* mensagem para o prestador */
     public String getStockString() {
-        return "Apenas "+String.valueOf(stock)+" no estoque.";
+        return "Parcelado em  "+String.valueOf(stock)+" vezes.";
     }
 
     public double getPrice() {

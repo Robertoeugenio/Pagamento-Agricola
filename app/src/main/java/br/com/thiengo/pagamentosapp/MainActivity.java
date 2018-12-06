@@ -30,6 +30,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static br.com.thiengo.pagamentosapp.R.mipmap.pagamento;
+
 public class MainActivity extends AppCompatActivity implements Observer {
     private Product product;
 
@@ -50,11 +52,13 @@ public class MainActivity extends AppCompatActivity implements Observer {
     private void initProduct(){
         product = new Product(
                 "6658-3324599755412",
-                "TÊNIS ADIDAS BARRICADE COURT 2 teste",
-                "Adiwear: Borracha de altíssima durabilidade que permite que a sola não marque o solo./ Adiprene +: Protege a parte dianteira do pé proporcionando./ Adiprene: Proporciona alta absorção de impactos para amortecer e proteger o calcanhar.",
-                3,
-                69.90,
-                R.mipmap.tennis);
+                "Plantação de Milho ",
+                "Plantação de milho para silagem, análise do solo, correção do solo, calagem, " +
+                        "cuidados na colheita, armazenamento e estocagem em silos" +
+                        "são 4 hectares de terra, com terra produtiva e plana com poucas dificuldades.",
+                4,
+                4000.00,
+                pagamento);
     }
 
     private void initViews( Product product ){
