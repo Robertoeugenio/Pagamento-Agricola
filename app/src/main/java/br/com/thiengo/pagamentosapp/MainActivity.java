@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
     private void initProduct(){
         product = new Product(
                 "6658-3324599755412",
-                "Plantação de Milho ",
+                "Plantação de Milho  ",
                 "Plantação de milho para silagem, análise do solo, correção do solo, calagem, " +
                         "cuidados na colheita, armazenamento e estocagem em silos" +
                         "são 4 hectares de terra, com terra produtiva e plana com poucas dificuldades.",
