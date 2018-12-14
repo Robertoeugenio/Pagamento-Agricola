@@ -39,7 +39,7 @@ public class MainActivityRoberto extends AppCompatActivity implements Observer {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_Roberto);
+        setContentView(R.layout.activity_main_roberto);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -73,7 +73,7 @@ public class MainActivityRoberto extends AppCompatActivity implements Observer {
     public void buy( View view ){
         new MDDialog.Builder(this)
                 .setTitle("Pagamento")
-                .setContentView(R.layout.paymentRoberto)
+                .setContentView(R.layout.payment_roberto)
                 .setNegativeButton("Cancelar", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -133,7 +133,7 @@ public class MainActivityRoberto extends AppCompatActivity implements Observer {
         }
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.25.221:8888/android-paymentRoberto/")
+                .baseUrl("http://192.168.25.221:8888/android-payment_roberto/")
                 .addConverterFactory( GsonConverterFactory.create() )
                 .build();
 

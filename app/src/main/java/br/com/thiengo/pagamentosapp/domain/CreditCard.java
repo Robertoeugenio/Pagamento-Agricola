@@ -87,7 +87,7 @@ public class CreditCard extends Observable {
     public void setError(String... errors) {
         for( String e : errors ){
             if( e.equalsIgnoreCase("card_number") ){
-                error += "Número do cartão, inválido; ";
+                error += " ERRO ! Número do cartão, inválido; ";
             }
         }
         Log.i("log", "error: "+error);
