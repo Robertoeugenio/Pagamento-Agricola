@@ -32,14 +32,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import static br.com.thiengo.pagamentosapp.R.mipmap.pagamento;
 
-public class MainActivity extends AppCompatActivity implements Observer {
+public class MainActivityRoberto extends AppCompatActivity implements Observer {
     private Product product;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_Roberto);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
     public void buy( View view ){
         new MDDialog.Builder(this)
                 .setTitle("Pagamento")
-                .setContentView(R.layout.payment)
+                .setContentView(R.layout.paymentRoberto)
                 .setNegativeButton("Cancelar", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
                         View root = v.getRootView();
     /* dados do cartao */
                         buttonBuying( true );
-                        CreditCard creditCard = new CreditCard( MainActivity.this );
+                        CreditCard creditCard = new CreditCard( MainActivityRoberto.this );
                         creditCard.setCardNumber( getViewContent( root, R.id.card_number ) );
                         creditCard.setName( getViewContent( root, R.id.name ) );
                         creditCard.setMonth( getViewContent( root, R.id.month ) );
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText( MainActivity.this, message, Toast.LENGTH_LONG ).show();
+                Toast.makeText( MainActivityRoberto.this, message, Toast.LENGTH_LONG ).show();
             }
         });
     }
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         }
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.25.221:8888/android-payment/")
+                .baseUrl("http://192.168.25.221:8888/android-paymentRoberto/")
                 .addConverterFactory( GsonConverterFactory.create() )
                 .build();
 
