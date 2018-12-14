@@ -42,7 +42,7 @@ public class Product {
     }
     /* mensagem para o prestador */
     public String getStockString() {
-        return "Parcelado em  "+String.valueOf(stock)+" vezes.";
+        return "Divido em  "+String.valueOf(stock)+" vezes.";
     }
 
     public double getPrice() {
